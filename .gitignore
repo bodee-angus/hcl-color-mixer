@@ -1,0 +1,27 @@
+cat > .gitignore << 'EOF'
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.package-lock.json#*   # partial/backup lockfiles on Windows sometimes
+
+# Vite / build
+dist/
+build/
+.vite/
+*.local
+
+# Env (keep secrets local)
+.env
+.env.*
+!.env.example
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+EOF
